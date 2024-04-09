@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Hedef Webhook -->
+    <TextView
+        android:id="@+id/textViewWebhookURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hedef Webhook:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextWebhookURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="(Ayarlı değil.)"
+        android:textSize="10sp"
+        android:layout_below="@id/textViewWebhookURL"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Webhook mesajı girin"
+        android:layout_below="@id/editTextWebhookURL"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <Button
+        android:id="@+id/buttonSendWebhook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Webhook u gönder!"
+        android:layout_below="@id/editTextMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Ayarlar butonu -->
+    <ImageButton
+        android:id="@+id/buttonSettings"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:src="@drawable/ic_settings"/>
+
+</RelativeLayout>
