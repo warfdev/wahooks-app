@@ -31,6 +31,5 @@
         android:layout_marginTop="50dp"
         android:text="Ayarları Kaydet" />
 
-    <!-- İsteğe bağlı olarak ayarlar için diğer arayüz öğelerini buraya ekleyebilirsiniz -->
 
 </LinearLayout>
