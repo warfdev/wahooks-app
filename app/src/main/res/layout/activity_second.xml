@@ -1,6 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send With Embeds"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <ImageButton
+        android:id="@+id/buttonSettings"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/textViewWebhookTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Embed Title:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:hint="Başlığınızı yazın." />
+
+    <TextView
+        android:id="@+id/editTextColorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Embed Color:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <EditText
+        android:id="@+id/editTextColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:hint="Kayıtlı bir renk yazın (Örnek: YELLOW)" />
+
+    <TextView
+        android:id="@+id/textViewWebhookURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Embed Description:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_below="@id/editTextColor"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextColor"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:hint="Açıklamanızı yazın." />
+
+    <TextView
+        android:id="@+id/textViewWebhookURLs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Embed Footer:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_below="@id/editTextDescription"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <EditText
+        android:id="@+id/editTextFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDescription"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:hint="Alt açıklamanızı(bilgi) yazın." />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFooter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Webhook'u gönder!" />
+
+    <TextView
+        android:id="@+id/textViewColorsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kayıtlı Embed Renkleri:\nRED GRAY GREEN\nYELLOW PURPLE ORANGE\nLIGHT_BLUE LIGHT_GREEN LIGHT_PURPLE"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#808080"
+        android:layout_below="@id/buttonSend"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="10dp"/>
+
+</RelativeLayout>

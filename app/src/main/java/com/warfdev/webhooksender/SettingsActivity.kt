@@ -1,10 +1,12 @@
 package com.warfdev.webhooksender
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 
 class SettingsActivity : AppCompatActivity() {
@@ -14,6 +16,17 @@ class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
+
+        val backButton: ImageButton = findViewById(R.id.buttonSettings)
+        backButton.setOnClickListener {
+            onBackPressed() // Geri butonuna basılınca varsayılan geri işlevi çağrılır
+        }
+
+        val secondButton: Button = findViewById(R.id.optionsGoSecond)
+        secondButton.setOnClickListener {
+            val intent = Intent(this@SettingsActivity, SecondActivity::class.java)
+            startActivity(intent)
+        }
 
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
 

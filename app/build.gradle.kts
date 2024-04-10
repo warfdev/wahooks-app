@@ -11,8 +11,8 @@ android {
         applicationId = "com.warfdev.webhooksender"
         minSdk = 34
         targetSdk = 34
-        versionCode = 1100
-        versionName = "1.1"
+        versionCode = 1200
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
