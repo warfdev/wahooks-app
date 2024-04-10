@@ -9,7 +9,7 @@ waHooks app helps you easily send webhooks to Discord over the phone.
 
 <br/>
 
-  [![Latest release](https://img.shields.io/github/v/release/vendetta-mod/VendettaManager?color=3AB8BA&display_name=release&label=Latest&style=for-the-badge)](https://github.com/vendetta-mod/VendettaManager/releases/latest)
+  [![Latest release](https://img.shields.io/github/v/release/vendetta-mod/VendettaManager?color=3AB8BA&display_name=release&label=Latest&style=for-the-badge)](https://github.com/warfdev/wahooks-app/releases/latest)
 
 <br>
 
