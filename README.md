@@ -25,9 +25,9 @@ waHooks app helps you easily send webhooks to Discord over the phone.
 
 License
 ---
-waHooks is licensed under the Open Software License version 3.0
+waHooks is licensed under the Apache version 2.0
 
-[![License: OSL v2](https://img.shields.io/badge/License-BSD%20v3-blue.svg?style=for-the-badge)](https://github.com/warfdev/wahooks-app/blob/master/LICENSE)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%20v2.0-blue.svg?style=for-the-badge)](https://github.com/warfdev/wahooks-app/blob/master/LICENSE)
 
 
 <br/>
