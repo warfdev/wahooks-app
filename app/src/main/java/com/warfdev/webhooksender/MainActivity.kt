@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editTextWebhookURL: EditText
     private lateinit var editTextMessage: EditText
     private lateinit var buttonSendWebhook: Button
+    private lateinit var buttonGoNews: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +26,17 @@ class MainActivity : AppCompatActivity() {
         editTextWebhookURL = findViewById(R.id.editTextWebhookURL)
         editTextMessage = findViewById(R.id.editTextMessage)
         buttonSendWebhook = findViewById(R.id.buttonSendWebhook)
+        buttonGoNews = findViewById(R.id.buttonGoNews)
 
-        val settingsButton: ImageButton = findViewById(R.id.buttonSettings)
+        val settingsButton: Button = findViewById(R.id.buttonSettings)
         settingsButton.setOnClickListener {
             val intent = Intent(this@MainActivity, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+        val newsButton: Button = findViewById(R.id.buttonGoNews)
+         newsButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, IntroActivity::class.java)
             startActivity(intent)
         }
 
@@ -36,6 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         // Kaydedilen webhook URL değerini al
         val savedWebhookUrl = getSavedWebhookUrl()
+        val savedWebhookName = getSavedWebhookName()
 
         // EditText referansını al ve içeriğini değiştir
         editTextWebhookURL.setText(savedWebhookUrl)
@@ -56,11 +65,49 @@ class MainActivity : AppCompatActivity() {
         var sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         return sharedPreferences.getString("webhook_url", "") ?: ""
     }
+    private fun getSavedWebhookName(): String {
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val savedName = sharedPreferences.getString("webhook_name", "")
+
+        return if (savedName.isNullOrBlank()) {
+            "Sent via waHooks App" // ayarlı değil ise
+        } else {
+            savedName // ayarlı ise
+        }
+    }
+
+    /**
+     * @description DiscordAPI Webhook JSON payload'ı;
+     * canim controbutorum verdi askim benim
+    {
+    "content": "Merhaba!",
+    "username": "wahooks",
+    "avatar_url": "https://example.com/avatar.png",
+    "embeds": [
+    {
+    "title": "Bu bir embed başlığıdır",
+    "description": "Bu bir embed açıklamasıdır.",
+    "color": 16711680, // bu color sistemini boyle yapanin anasini #HEX DICEZ KULLANCAZ ISTE BUEQ
+    "fields": [
+    {
+    "name": "Alan 1",
+    "value": "Değer 1"
+    },
+    {
+    "name": "Alan 2",
+    "value": "Değer 2"
+    }
+    ]
+    }
+    ]
+    }
+
+     */
 
     private fun sendWebhook(webhookURL: String, message: String) {
         val client = OkHttpClient()
         val mediaTypeString = "application/json" // veya istediğiniz medya türü
-        val json = "{\"content\":\"$message\"}"
+        val json = "{\"username\":\"${getSavedWebhookName()}\", \"content\":\"$message\"}"
         val mediaType = mediaTypeString.toMediaTypeOrNull()
         val body = RequestBody.create(mediaType, json)
         val request = Request.Builder()

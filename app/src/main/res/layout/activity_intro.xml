@@ -1,6 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⛏ waHooks • News"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <View
+        android:id="@+id/codeBlock"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/rounded_corner_background"/>
+
+    <TextView
+        android:id="@+id/textViewNews1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="85dp"
+        android:text="●"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textViewNews1text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="88dp"
+        android:text="Ayarlar menüsüne embedli mesaj gönderme eklendi"
+        android:textColor="#808080"
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+
+    <TextView
+        android:id="@+id/textViewNews2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNews1text"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="-3dp"
+        android:text="●"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textViewNews2text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNews1text"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="2dp"
+        android:text="Minimum SDK vers. değişti, artık android 9+ kullanabilir."
+        android:textColor="#808080"
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+
+    <TextView
+        android:id="@+id/textViewNews3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNews2text"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="-3dp"
+        android:text="●"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textViewNews3text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNews2text"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="2dp"
+        android:text="Ayarlar menüsüne webhook ismi ayarlama eklendi."
+        android:textColor="#808080"
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+
+
+    <Button
+        android:id="@+id/buttonIntroBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="                  Geri dön                    "
+        android:layout_below="@id/codeBlock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="430dp"/>
+
+
+</RelativeLayout>

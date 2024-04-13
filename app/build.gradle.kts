@@ -9,10 +9,10 @@ android {
 
     defaultConfig {
         applicationId = "com.warfdev.webhooksender"
-        minSdk = 34
+        minSdk = 28
         targetSdk = 34
-        versionCode = 1200
-        versionName = "1.2"
+        versionCode = 1500
+        versionName = "1.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

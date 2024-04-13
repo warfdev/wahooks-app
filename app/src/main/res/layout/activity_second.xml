@@ -14,15 +14,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/buttonSettings"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-20dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_arrow_back" />
+        android:text="𒌋"
+        android:textColor="#959595"
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/textViewWebhookTitle"

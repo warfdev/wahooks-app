@@ -15,6 +15,16 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
 
+    <Button
+        android:id="@+id/buttonGoNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textColor="#959595"
+        android:text="⛏"
+        android:textSize="35sp"
+        android:background="@android:color/transparent" />
+
     <!-- Hedef Webhook -->
     <TextView
         android:id="@+id/textViewWebhookURL"
@@ -57,12 +67,14 @@
         android:layout_marginTop="20dp"/>
 
     <!-- Ayarlar butonu -->
-    <ImageButton
+    <Button
         android:id="@+id/buttonSettings"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_settings_w" />
+        android:text="⌾"
+        android:textColor="#959595"
+        android:textSize="35sp" />
 
 </RelativeLayout>

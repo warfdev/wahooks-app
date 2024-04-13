@@ -24,7 +24,7 @@ class SecondActivity : AppCompatActivity() {
         val editTextFooter = findViewById<EditText>(R.id.editTextFooter)
         val buttonSend = findViewById<Button>(R.id.buttonSend)
 
-        val backButton: ImageButton = findViewById(R.id.buttonSettings)
+        val backButton: Button = findViewById(R.id.buttonSettings)
         backButton.setOnClickListener {
             onBackPressed()
         }
@@ -52,6 +52,17 @@ class SecondActivity : AppCompatActivity() {
     private fun getSavedWebhookUrl(): String {
         val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         return sharedPreferences.getString("webhook_url", "") ?: ""
+    }
+
+    private fun getSavedWebhookName(): String {
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val savedName = sharedPreferences.getString("webhook_name", "")
+
+        return if (savedName.isNullOrBlank()) {
+            "Sent via waHooks App" // ayarlı değil ise
+        } else {
+            savedName // ayarlı ise
+        }
     }
 
     // kayitli webhook uzerinden ivj yapiyoruz
@@ -103,6 +114,7 @@ class SecondActivity : AppCompatActivity() {
         //
         val payload = """
             {
+                "username": "${getSavedWebhookName()}",
                 "embeds": [
                     {
                         "title": "$title",
