@@ -19,7 +19,7 @@ waHooks app helps you easily send webhooks to Discord over the phone.
   ![Total downloads](https://img.shields.io/github/downloads/warfdev/wahooks-app/total?style=for-the-badge&logo=github&label=Downloads%20(Total)&color=blue)
 
 
-<img width="180px" style="border-radius: 7%" src="https://media.discordapp.net/attachments/1218206716626341991/1227517442310275092/Screenshot_20240410_101428.jpg?ex=6628b1b4&is=66163cb4&hm=fe7cd22bee8ed8a8cd52ea009c0025572218c5ac38df6f69bfd03325d8f35114&" alt="wahooksapp">
+<img width="180px" style="border-radius: 7%" src="https://media.discordapp.net/attachments/1227214853954080798/1228833678302511144/Screenshot_20240414_012540.jpg?ex=662d7b8b&is=661b068b&hm=4127a056777d738a635ad1429a013100a62d009a94c27e28de81855a3f18a2b1&" alt="wahooksapp">
 
 </div>
 
@@ -27,8 +27,8 @@ waHooks app helps you easily send webhooks to Discord over the phone.
 
 <br/>
 
-> [!WARNING]
-> The application is currently in beta testing phase.
+> [!IMPORTANT]
+> If you have a problem, please come to our discord support server.
 
 <br/>
 
