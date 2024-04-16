@@ -49,7 +49,7 @@ waHooks is licensed under the Apache version 2.0
 
 <div align="center">
 
-<strong>[ Discord Server ](https://discord.com/invite/msk8n4ESMT)</strong>
+<strong>[ Discord Server ](https://discord.com/invite/yV48WhNFCg)</strong>
 
 </div>
 
